@@ -1,11 +1,17 @@
-## Harvesting Abandoned AWS Infrastructure
+![Header](https://github.com/user-attachments/assets/a52af369-408a-489e-94dd-47efd6c621d8)
+## Identifying and managing abandoned AWS Infrastructure
 
-Cloud-native environments offer an economical and effective solution for managing resources and infrastructure. However, it is crucial to properly monitor all deployed infrastructure. When resources are distributed across multiple regions and accounts, identifying and removing unused objects can become a significant challenge for administrators. Failing to delete certain types of unused resources in AWS can result in excessive costs, an increased threat landscape, and more complex operational activities.
-This solution aims to centralize the monitoring of abandoned infrastructure of specific types, consolidating it in one place for easier management
-For example, in Google Sheet.
+Cloud-native environments offer a cost-effective way to manage resources, but proper monitoring of deployed infrastructure is crucial. When resources are spread across multiple regions and accounts, identifying unused objects can be challenging, resulting in unnecessary costs and security risks. This solution centralizes the monitoring of abandoned infrastructure, such as in a Google Sheet or a simple text file in an S3 bucket, for easier tracking and management of unused resources.
+## What is it?
+These handy scripts help obtain unused infrastructure objects from multiple AWS accounts and regions and save them in one place
 
+## How to use it?
+Deploy the required roles, event triggers, and Lambda functions, along with tailored scripts to meet your specific requirements. Configure the storage location for the data and provide the necessary credentials for access (Google Sheet or an S3 bucket)
 
-**Two types of scripts are presented here: those that work with the Trusted Advisor service and those that do not**
+## In more detail
+![DF341D2A-D9F9-4A57-B594-256B5295142C](https://github.com/user-attachments/assets/70edba7c-eb13-452f-a102-0b87d6386b36)
+
+**There are two types of scripts: one that uses Trusted Advisor and one that does not**
 
 Scripts utilizing Trusted Advisor provide more comprehensive outputs, including details such as Account, Region/AZ, Instance ID, Instance Name, Instance Type, Estimated Monthly Savings, CPU/Network usage over 14 days, CPU Utilization 14-Day Average, Network I/O 14-Day Average, and the Number of Days with Low Utilization (for EC2 instances, as an example). However, these scripts require an AWS Business or Enterprise Support plan.
 On the other hand, scripts that do not use Trusted Advisor are compatible with basic plans, offering an alternative for users without advanced support subscriptions.
@@ -21,14 +27,24 @@ Used resources:
 - Lambda function
 - Event Bridge
 - IAM Roles
+- S3 bucket
 
 
 <details>
-<summary>Click to view the image</summary>
+<summary>Click to view the examples</summary>
 
+![D0ADCE08-591A-4FE3-A125-3ED295823311](https://github.com/user-attachments/assets/de147cee-b8b2-4135-9697-368475c4cdc4)
+![E8F6FA0F-DDB8-45FE-B6B9-3D9C0D11999F](https://github.com/user-attachments/assets/293b7787-5785-48ae-a56e-ab2a1bb52c8b)
+![D0ADCE08-591A-4FE3-A125-3ED295823311](https://github.com/user-attachments/assets/8738856a-60ee-4c5f-95e3-7edcf57c2c1e)
 
-
-
-
+Raw txt in S3 bucket
+```
+ACCOUNT   REGION        IP
+account_1 eu-central-1	XX.XXX.XX.XXX	
+account_1 eu-central-1	X.XXX.XXX.XXX
+account_2 eu-west-2    	X.XXX.XXX.XXX
+account_2 eu-north-1   	X.XXX.XXX.XXX
+account_2 eu-north-1   	X.XXX.XXX.XXX
+```
 
 </details>
