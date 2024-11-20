@@ -1,0 +1,23 @@
+{
+    "Statement": [
+        {
+            "Action": [
+                "support:DescribeTrustedAdvisorCheckRefreshStatuses",
+                "support:DescribeTrustedAdvisorCheckSummaries",
+                "support:DescribeTrustedAdvisorCheckResult",
+                "support:DescribeTrustedAdvisorChecks",
+                "support:RefreshTrustedAdvisorCheck",
+                "trustedadvisor:Describe*"
+            ],
+            "Effect": "Allow",
+            "Resource": "*"
+        },
+        {
+            "Action": "ec2:DescribeRegions",
+            "Effect": "Allow",
+            "Resource": "*"
+        }
+    ],
+    "Version": "2012-10-17"
+}
+

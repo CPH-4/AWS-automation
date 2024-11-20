@@ -1,0 +1,21 @@
+{
+    "Statement": [
+        {
+            "Action": [
+                "s3:PutObject"
+            ],
+            "Effect": "Allow",
+            "Resource": "*"
+        },
+        {
+            "Action": "sts:AssumeRole",
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:iam::111111111111:role/get-abandoned-ebs-observed-ac",
+                "arn:aws:iam::222222222222:role/get-abandoned-ebs-observed-ac"
+            ],
+            "Sid": "VisualEditor0"
+        }
+    ],
+    "Version": "2012-10-17"
+}

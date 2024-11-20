@@ -1,0 +1,3 @@
+ACCOUNTS=[{'name':'account_1', 'role_arn': 'arn:aws:iam::111111111111:role/role-for-trust-advisor-1'}, {'name':'account_2', 'role_arn': 'arn:aws:iam::222222222222:role/role-for-trust-advisor-2'}]
+SPREADSHEET_KEY='string'
+WORKSHEETS_NAME={'ec2': 'EC2 list'}

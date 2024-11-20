@@ -1,0 +1,17 @@
+
+{
+    "Statement": [
+        {
+            "Action": [
+                "elasticloadbalancing:DescribeLoadBalancers"
+                "ec2:DescribeRegions",
+                "cloudwatch:GetMetricData"
+          
+                ],
+            "Effect": "Allow",
+            "Resource": "*",
+            "Sid": "Stmt1682327862711"
+        }    
+    ]
+    "Version": "2012-10-17"
+}

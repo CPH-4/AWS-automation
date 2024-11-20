@@ -1,0 +1,3 @@
+ACCOUNTS=[{'name':'account_1', 'role_arn': 'arn:aws:iam::111111111111:role/role-for-getting-nlb-alb'}, {'name':'account_2', 'role_arn': 'arn:aws:iam::222222222222:role/role-for-getting-nlb-alb'}]
+SPREADSHEET_KEY='string'
+WORKSHEETS_NAME={'elb': 'Load balancers'}
